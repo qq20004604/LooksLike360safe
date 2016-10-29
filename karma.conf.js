@@ -15,6 +15,7 @@ module.exports = function (config) {
     },
     // if you want to continuously re-run tests on file-save,
     // replace the following line with `autoWatch: true`
-    singleRun: true
+    // singleRun: true
+    autoWatch: true
   })
 }
