@@ -60,11 +60,11 @@
             img: function () {
                 if (this.imgstate) {
                     return {
-                        backgroundImage: "url(../../dist/bg-img-good.png)"
+                        backgroundImage: "url(./dist/bg-img-good.png)"
                     }
                 } else {
                     return {
-                        backgroundImage: "url(../../dist/bg-img-normal.png)"
+                        backgroundImage: "url(./dist/bg-img-normal.png)"
                     }
                 }
             }
