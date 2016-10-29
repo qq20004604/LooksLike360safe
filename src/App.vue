@@ -19,6 +19,9 @@
             <button @click="loginExpired">
                 未登录（登录过期）
             </button>
+            <button @click="TestAddNewDialog">
+                点击加载一个dialog(test按钮，点击无效）
+            </button>
             <p>说明：</p>
             <ul>
                 <li>
@@ -27,6 +30,12 @@
                 </li>
                 <li>
                     右上角第四个按钮，点击后有下拉菜单
+                </li>
+                <li>
+                    鼠标移动到安全防护中心和网购先陪位置，图片变亮
+                </li>
+                <li>
+                    鼠标移动到3个大按钮，大按钮会变色，并且图标会动
                 </li>
             </ul>
         </div>
@@ -62,8 +71,12 @@
     import mainFoot from './components/main-foot.vue'
     import Bus from './event-bus.js'
 
+
     export default {
         name: 'app',
+        data(){
+            return {}
+        },
         methods: {
             setScoreHundred: function () {
                 Bus.$emit("/score/change", 100);
@@ -88,6 +101,9 @@
             },
             loginExpired: function () {
                 Bus.$emit("/login/expired");
+            },
+            TestAddNewDialog: function () {
+
             }
         },
         components: {

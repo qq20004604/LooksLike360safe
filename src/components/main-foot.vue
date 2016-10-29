@@ -1,5 +1,6 @@
 <template>
     <div class="main-foot">
+        <foot-big-btns class="foot-big-btns"></foot-big-btns>
     </div>
 </template>
 <style scoped>
@@ -11,9 +12,17 @@
         box-sizing: border-box;
         border: 1px solid grey;
         border-top: none;
+        position: relative;
+    }
+
+    .foot-big-btns {
+        position: absolute;
+        top: 19px;
+        left: 31px;
     }
 </style>
 <script>
+    import footBigBtns from './foot-big-btns.vue'
     export default{
         data(){
             return {
@@ -21,6 +30,8 @@
             }
         },
         methods: {},
-        components: {}
+        components: {
+            footBigBtns
+        }
     }
 </script>

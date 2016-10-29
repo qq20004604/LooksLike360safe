@@ -12,7 +12,7 @@ http://jianwangsan.cn/LooksLike360safe/index.html
         app-config-btns.vue    //最上方，右上角的按钮组，包括关闭和设置等
         app-main.vue    //最中间，显示分数、信息提示，还有按钮
         login-in-appMain.vue    //右上部，登录组件
-        
+        protect-tools.vue    //页面上半部分，左下的安全防护中心和网购先陪区域
     main-foot.vue    //360安全卫士初始页面，下方背景色为白色的区域
-    
+        foot-big-btns.vue    //下部白色区域，左边的3个大按钮
     event-bus.js    //事件载体，用于在不同组件之间传递事件

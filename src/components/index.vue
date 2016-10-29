@@ -4,6 +4,7 @@
         <app-config-btns style="float:right"></app-config-btns>
         <app-main class="app-main"></app-main>
         <login-area class="login-area"></login-area>
+        <protect-tools class="protect-tools"></protect-tools>
     </div>
 </template>
 <style scoped>
@@ -24,6 +25,12 @@
         right: 0;
     }
 
+    .protect-tools {
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+    }
+
 </style>
 <script>
     // 本组件用于首页的上方区域（如绿色、黄色等背景区域）
@@ -32,6 +39,7 @@
     import appMain from './app-main.vue'
     import Bus from '../event-bus.js'
     import loginArea from './login-in-appMain.vue'
+    import protectTools from './protect-tools.vue'
     //import OtherComponent from './components/other.vue'
     export default{
         created: function () {
@@ -74,7 +82,8 @@
             appTitle,
             appConfigBtns,
             appMain,
-            loginArea
+            loginArea,
+            protectTools
         }
     }
 </script>

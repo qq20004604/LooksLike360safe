@@ -108,6 +108,10 @@
         float: left;
     }
 
+    .login-right:hover {
+        outline: 1px solid white;
+    }
+
     .notlogin {
         background-image: url(./dist/images.png);
         background-position: -450px 0px;
