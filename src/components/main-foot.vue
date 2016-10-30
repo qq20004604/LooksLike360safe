@@ -1,6 +1,7 @@
 <template>
     <div class="main-foot">
         <foot-big-btns class="foot-big-btns"></foot-big-btns>
+        <foot-toolbox class="foot-toolbox"></foot-toolbox>
     </div>
 </template>
 <style scoped>
@@ -17,12 +18,19 @@
 
     .foot-big-btns {
         position: absolute;
-        top: 19px;
-        left: 31px;
+        top: 33px;
+        left: 26px;
+    }
+
+    .foot-toolbox {
+        position: absolute;
+        top: 20px;
+        right: 0;
     }
 </style>
 <script>
     import footBigBtns from './foot-big-btns.vue'
+    import footToolbox from './foot-toolbox.vue'
     export default{
         data(){
             return {
@@ -31,7 +39,8 @@
         },
         methods: {},
         components: {
-            footBigBtns
+            footBigBtns,
+            footToolbox
         }
     }
 </script>

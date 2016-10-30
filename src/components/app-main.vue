@@ -21,10 +21,8 @@
             </div>
         </div>
         <div class="see-details">
-            <div class="see-details-img">
-
-            </div>
-            <div class="see-details-text">
+            <div class="see-details-img"></div>
+            <div class="see-details-text" @click="setScoreRandom">
                 查看详情
             </div>
         </div>
@@ -161,6 +159,10 @@
         methods: {
             getScore: function () {
                 return this.score;
+            },
+            setScoreRandom: function () {
+                var score = parseInt((Math.random() * 101));
+                Bus.$emit("/score/change", score);
             }
         },
         components: {

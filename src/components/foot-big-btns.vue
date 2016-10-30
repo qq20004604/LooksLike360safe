@@ -1,6 +1,6 @@
 <template>
     <div class="foot-big-btns">
-        <div class="big-btn">
+        <div class="big-btn" @click="clickThunder">
             <div class="big-circle thunder">
                 <div class="middle-circle thunder">
                     <div class="min-circle thunder">
@@ -11,7 +11,7 @@
             <div class="text">查杀修复</div>
         </div>
 
-        <div class="big-btn">
+        <div class="big-btn" @click="clickClean">
             <div class="big-circle clean">
                 <div class="middle-circle clean">
                     <div class="min-circle clean">
@@ -22,7 +22,7 @@
             <div class="text">电脑清理</div>
         </div>
 
-        <div class="big-btn">
+        <div class="big-btn" @click="clickOptimization">
             <div class="big-circle optimization">
                 <div class="middle-circle optimization">
                     <div class="min-circle optimization">
@@ -36,15 +36,21 @@
 </template>
 <style scoped>
     .foot-big-btns {
-        width: 327px;
+        width: 330px;
         height: 117px;
     }
 
     .big-btn {
         width: 98px;
         height: 117px;
+        margin-right: 18px;
         position: relative;
         display: inline-block;
+        float: left;
+    }
+
+    .foot-big-btns .big-btn:last-child {
+        margin-right: 0;
     }
 
     .text {
@@ -56,6 +62,7 @@
         left: 0;
         bottom: 0;
         text-align: center;
+        color: #585858;
     }
 
     .big-circle {
@@ -351,18 +358,23 @@
 
 </style>
 <script>
-    //import HeaderComponent from './components/header.vue'
-    //import OtherComponent from './components/other.vue'
     export default{
         data(){
-            return {
-                msg: 'hello vue'
-            }
+            return {}
         },
-        methods: {},
+        methods: {
+            clickThunder: function () {
+                alert("你点击了\"查杀修复\"");
+            },
+            clickClean: function () {
+                alert("你点击了\"电脑清理\"");
+            },
+            clickOptimization: function () {
+                alert("你点击了\"优化加速\"");
+            },
+        },
         components: {
-            //'other-component':OtherComponent,
-            //HeaderComponent,
+
         }
     }
 </script>

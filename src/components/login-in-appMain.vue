@@ -1,5 +1,5 @@
 <template>
-    <div class="login">
+    <div class="login" @click="changeLoginState">
         <div class="login-left" v-if="haveLogined">
             <div class="name-line">
                 <div class="name">零零水</div>
@@ -176,7 +176,20 @@
                 }
             }
         },
-        methods: {},
+        methods: {
+            changeLoginState: function () {
+                //登录则切换为未登录
+                if (this.haveLogined) {
+                    Bus.$emit("/login/logout");
+                } else if (!this.loginExpired) {
+                    //未登录，然后未超时则切换为超时
+                    Bus.$emit("/login/expired");
+                } else {
+                    //未登录，且超时则切换为登录
+                    Bus.$emit("/login/success");
+                }
+            }
+        },
         components: {
             //'other-component':OtherComponent,
             //HeaderComponent,
